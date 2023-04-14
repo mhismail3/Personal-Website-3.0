@@ -1,0 +1,274 @@
+@keyframes horiz-slide {
+  0% {
+    transform: translateX(-200%);
+    opacity: 1; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+.container,
+.row {
+  *zoom: 1; }
+  .container:before,
+  .row:before, .container:after,
+  .row:after {
+    content: " ";
+    display: table; }
+  .container:after,
+  .row:after {
+    clear: both; }
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  list-style: none;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+  color: inherit;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto !important; }
+
+[class*='grid_'] {
+  float: left;
+  padding: 1em;
+  width: 100%;
+  min-height: 1px; }
+
+@media only screen and (min-width: 1024px) {
+  .grid_1 {
+    width: 8.33333%; }
+
+  .grid_2 {
+    width: 16.66667%; }
+
+  .grid_3 {
+    width: 25%; }
+
+  .grid_4 {
+    width: 33.33333%; }
+
+  .grid_5 {
+    width: 41.66667%; }
+
+  .grid_6 {
+    width: 50%; }
+
+  .grid_7 {
+    width: 58.33333%; }
+
+  .grid_8 {
+    width: 66.66667%; }
+
+  .grid_9 {
+    width: 75%; }
+
+  .grid_10 {
+    width: 83.33333%; }
+
+  .grid_11 {
+    width: 91.66667%; }
+
+  .grid_12 {
+    width: 100%; } }
+@keyframes horiz-slide {
+  0% {
+    transform: translateX(-200%);
+    opacity: 1; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+html {
+  height: 100%;
+  background-color: #f8f8f8; }
+
+@media only screen and (max-width: 750px) {
+  body {
+    font-size: 85%; } }
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: auto; }
+
+.invisible {
+  opacity: 0; }
+
+header {
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background-color: #f8f8f8; }
+  @media only screen and (min-width: 1025px) {
+    header {
+      background-color: inherit; } }
+  header .content {
+    display: flex;
+    flex-direction: row;
+    margin: 20px auto;
+    color: #555; }
+    header .content .icon-container {
+      display: flex;
+      flex-direction: column;
+      height: 3em;
+      width: 3em;
+      border: 1px solid #555;
+      border-radius: 50%;
+      background-color: #f8f8f8;
+      transition: all 0.2s; }
+      @media (hover: hover) {
+        header .content .icon-container:hover {
+          border-radius: 5%;
+          border: none;
+          color: #eee;
+          background-color: #555; } }
+      header .content .icon-container i {
+        margin: auto;
+        padding: 0;
+        text-align: center; }
+    header .content #right-icons {
+      display: flex;
+      margin-left: auto; }
+      header .content #right-icons .icon-container {
+        margin-left: 10px; }
+
+.contain {
+  font-family: "Nunito", sans-serif;
+  font-weight: 200;
+  color: #222;
+  position: relative;
+  min-height: 100vh;
+  width: 95%;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column; }
+  @media only screen and (min-width: 751px) and (max-width: 1024px) {
+    .contain {
+      width: 85%;
+      margin-top: 200px; } }
+  @media only screen and (min-width: 1025px) {
+    .contain {
+      width: 60%;
+      max-width: 800px;
+      margin-top: 200px; } }
+  .contain h1 {
+    font-family: "Patua One", sans-serif;
+    font-size: 2.8em;
+    line-height: 1em;
+    color: #555;
+    margin: 15px 0; }
+  .contain .content > img {
+    max-height: 250px;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.8; }
+    @media only screen and (max-width: 750px) {
+      .contain .content > img {
+        max-height: 200px; } }
+  .contain .dateline {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 0.9em;
+    border-bottom: 1px solid #ccc;
+    margin: 15px 0;
+    padding-bottom: 15px; }
+    @media only screen and (max-width: 750px) {
+      .contain .dateline {
+        font-size: 1em; } }
+    .contain .dateline > * {
+      display: inline; }
+    .contain .dateline i {
+      margin-right: 10px; }
+  .contain .text {
+    margin-top: 50px; }
+    .contain .text p {
+      font-size: 1.3em;
+      margin: 36px 0; }
+      .contain .text p:first-child {
+        font-family: "Patua One", sans-serif;
+        font-size: 4.8em;
+        color: #555;
+        float: left;
+        line-height: 0.9em;
+        margin: 0 10px 0 0;
+        text-align: center; }
+      .contain .text p:last-child {
+        margin-bottom: 50px; }
+    .contain .text .img-float-right {
+      float: right;
+      width: 60%;
+      padding: 5px 0px 0px 25px;
+      margin-right: -23%;
+      height: auto; }
+      @media only screen and (min-width: 751px) and (max-width: 1024px) {
+        .contain .text .img-float-right {
+          display: inline;
+          padding: 15px 0 15px 15px;
+          margin: 0 auto; } }
+      @media only screen and (max-width: 750px) {
+        .contain .text .img-float-right {
+          float: none;
+          padding: 10px;
+          margin: 0;
+          width: 100%; } }
+    .contain .text .img-float-left {
+      float: left;
+      width: 40%;
+      padding: 5px 25px 0px 0px;
+      margin-left: -23%;
+      height: auto; }
+      @media only screen and (min-width: 751px) and (max-width: 1024px) {
+        .contain .text .img-float-left {
+          display: inline;
+          padding: 15px 15px 15px 0px;
+          margin: 0 auto; } }
+      @media only screen and (max-width: 750px) {
+        .contain .text .img-float-left {
+          float: none;
+          padding: 10px;
+          margin: 0;
+          width: 100%; } }
+    @media only screen and (max-width: 750px) {
+      .contain .text .smaller-on-mobile {
+        display: block;
+        margin: auto;
+        width: 60%; } }
+  .contain .no-float {
+    display: block;
+    margin: auto;
+    width: 100%; }
+  .contain .img-border {
+    border: 2px solid #eee; }
+  .contain .img-top-margin {
+    margin-top: 15px; }
+
+footer {
+  font-family: "Nunito", sans-serif;
+  color: #222;
+  height: 50px;
+  margin: auto 0 0;
+  position: relative;
+  display: flex;
+  flex-direction: column; }
+  footer p {
+    text-align: center;
+    margin: auto 0;
+    padding: 30px 0 10px; }
+    @media only screen and (min-width: 1025px) {
+      footer p {
+        text-align: inherit; } }
+
+/*# sourceMappingURL=page.css.map */

@@ -1,0 +1,238 @@
+@import "partials/grid";
+@import "partials/declarations";
+
+
+
+html {
+    height: 100%;
+	background-color: $page-bg-color;
+}
+body {
+	@include respond-to(phones) {
+		font-size: 85%;
+	}
+}
+.container {      
+    width: 95%;
+    max-width: $grid-max-width;
+    margin: auto;
+}
+.invisible {
+    opacity: 0;
+}
+
+
+
+header {
+    width: 100%;
+	top: 0;
+	z-index: 100;
+    display: flex;
+	flex-direction: column;
+	position: fixed;
+	background-color: $page-bg-color;
+	
+	@include respond-to(laptops) {
+		background-color: inherit;
+	}
+    
+    .content {
+		display: flex;
+		flex-direction: row;
+		margin: 20px auto;
+		color: $grey;
+		
+		.icon-container {
+			display: flex;
+			flex-direction: column;
+			height: 3em;
+			width: 3em;
+			border: 1px solid $grey;
+			border-radius: 50%;
+			background-color: $page-bg-color;
+			transition: all 0.2s;
+			
+			@include respond-to(mouse-hover) {
+				&:hover {
+					border-radius: 5%;
+					border: none;
+					color: #eee;
+					background-color: $grey;
+				}
+			}
+			
+			i {
+				margin: auto;
+				padding: 0;
+				text-align: center;
+			}
+		}
+		#right-icons {
+			display: flex;
+			margin-left: auto;
+			
+			.icon-container {
+				margin-left: 10px;
+			}
+		}
+    }
+}
+
+.contain {
+	font-family: $content-font;
+	font-weight: 200;
+	color: $darkgrey;
+	position: relative;
+	min-height: 100vh;
+//	height: 2000px;
+    width: 95%;
+	margin-top: 100px;
+	display: flex;
+	flex-direction: column;
+	
+	@include respond-to(tablets) {
+		width: 85%;
+		margin-top: 200px;
+	}
+	@include respond-to(laptops) {
+		width: 60%;
+		max-width: 800px;
+		margin-top: 200px;
+	}
+
+	h1 {
+		font-family: $title-font;
+		font-size: 2.8em;
+		line-height: 1em;
+		color: $grey;
+		margin: 15px 0;
+//		white-space: nowrap;
+	}
+	.content > img {
+		max-height: 250px;
+		width: 100%;
+		object-fit: cover;
+		opacity: 0.8;
+		
+		@include respond-to(phones) {
+			max-height: 200px;
+		}
+	}
+	.dateline {
+		font-style: italic;
+		font-weight: 300;
+		font-size: 0.9em;
+		border-bottom: 1px solid #ccc;
+		margin: 15px 0;
+		padding-bottom: 15px;
+		
+		@include respond-to(phones) {
+			font-size: 1em;
+		}
+		
+		& > * {
+			display: inline;			
+		}
+		i {
+			margin-right: 10px;
+		}
+	}
+	.text {
+		margin-top: 50px;
+		
+		p {
+			font-size: 1.3em;
+			margin: 36px 0;
+
+			&:first-child {
+				font-family: $title-font;
+				font-size: 4.8em;
+				color: $grey;
+				float: left;
+//				width: 70px;
+				line-height: 0.9em;
+				margin: 0 10px 0 0;
+				text-align: center;
+			}
+			&:last-child {
+				margin-bottom: 50px;
+			}
+		}
+		.img-float-right {
+			float: right;
+			width: 60%;
+			padding: 5px 0px 0px 25px;
+			margin-right: -23%;
+			height: auto;
+			
+			@include respond-to(tablets) {
+				display: inline;
+				padding: 15px 0 15px 15px;
+				margin: 0 auto;
+			}
+			@include respond-to(phones) {
+				float: none;
+				padding: 10px;
+				margin: 0;
+				width: 100%;
+			}
+		}
+		.img-float-left {
+			float: left;
+			width: 40%;
+			padding: 5px 25px 0px 0px;
+			margin-left: -23%;
+			height: auto;
+			
+			@include respond-to(tablets) {
+				display: inline;
+				padding: 15px 15px 15px 0px;
+				margin: 0 auto;
+			}
+			@include respond-to(phones) {
+				float: none;
+				padding: 10px;
+				margin: 0;
+				width: 100%;
+			}
+		}
+		.smaller-on-mobile {
+			@include respond-to(phones) {
+				display: block;
+				margin: auto;
+				width: 60%;
+			}
+		}
+	}
+	.no-float {
+		display: block;
+		margin: auto;
+		width: 100%;
+	}
+	.img-border {
+		border: 2px solid #eee;
+	}
+	.img-top-margin {
+		margin-top: 15px;
+	}
+}
+
+footer {
+	font-family: $content-font;
+	color: $darkgrey;
+	height: 50px;
+    margin: auto 0 0;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	
+	p {
+		text-align: center;
+		margin: auto 0;
+		padding: 30px 0 10px;
+		
+		@include respond-to(laptops) {
+			text-align: inherit;
+		}
+	}
+}

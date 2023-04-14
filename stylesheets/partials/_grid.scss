@@ -1,0 +1,56 @@
+@import "declarations";
+
+%clearfix {
+    *zoom: 1;
+    &:before, 
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    list-style: none;
+    vertical-align: baseline;
+    background: transparent;
+    text-decoration: none;
+    color: inherit;
+    
+    @include border-box;
+}
+
+img {
+    width: auto;
+    max-width: 100%;
+    height: auto !important; 
+}
+
+.container,
+.row {
+    @extend %clearfix;
+}
+
+[class*='grid_'] {
+    float: left;
+    padding: 1em;
+    width: 100%;
+    min-height: 1px; 
+}
+
+@media only screen and (min-width: #{$laptop-width}) {
+    @for $i from 1 through $grid-columns {      
+        .grid_#{$i} {         
+            width: 100% / $grid-columns * $i;   
+        }           
+    }   
+}

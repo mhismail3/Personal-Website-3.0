@@ -1,0 +1,93 @@
+$title-font: 'Patua One', sans-serif;
+$content-font: 'Nunito', sans-serif;
+
+$grid-columns: 12;
+$grid-max-width: 1200px;
+
+$laptop-width: 1024px;
+$tablet-width: 750px;
+
+$breakpoint-big: "only screen and (min-width: " + $laptop-width + "px)";
+$breakpoint-medium: "only screen and (min-width: " + $tablet-width + "px) and (max-width: " + ($laptop-width - 1) + "px)";
+
+$grey: #555;
+$darkgrey: #222;
+$page-bg-color: #f8f8f8;
+
+@mixin border-box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+}
+
+@keyframes horiz-slide {
+    0% { 
+        transform: translateX(-200%);
+        opacity: 1; 
+    }
+    100% { 
+        transform: translateX(0);
+        opacity: 1; 
+    }
+}
+
+@mixin stagger-anim-delay($i, $initial-delay, $stagger-delay) {
+    @while $i > 0 {
+        &:nth-of-type(#{$i}) {
+            -webkit-animation-delay: $initial-delay + $stagger-delay * $i;
+            animation-delay: $initial-delay + $stagger-delay * $i;
+        }
+        $i: $i - 1;
+    }
+}
+
+@mixin img-circle($width: none, $min-width: none, $max-width: none) {
+	width: #{$width};
+	min-width: #{$min-width};
+	max-width: #{$max-width};
+	border-radius: 50%;
+}
+
+@mixin respond-to($media) {
+	@if $media == phones {
+        @media only screen and (max-width: $tablet-width) {
+            @content;
+        }
+    } @else if $media == phones-portrait {
+        @media only screen and (max-width: $tablet-width) and (orientation: portrait) {
+            @content;
+        }
+    } @else if $media == phones-landscape {
+        @media only screen and (max-width: $tablet-width) and (orientation: landscape) {
+            @content;
+        }
+    } @else if $media == tablets {
+        @media only screen and (min-width: $tablet-width + 1) and (max-width: $laptop-width) {
+            @content;
+        }
+    } @else if $media == tablets-portrait {
+        @media only screen and (min-width: $tablet-width + 1) and (max-width: $laptop-width) and (orientation: portrait) {
+            @content;
+        }
+    } @else if $media == tablets-landscape {
+        @media only screen and (min-width: $tablet-width + 1) and (max-width: $laptop-width) and (orientation: landscape) {
+            @content;
+        }
+    } @else if $media == laptops-less-height {
+        @media only screen and (min-width: $laptop-width + 1) and (max-height: 640px) {
+            @content;
+        }
+    } @else if $media == laptops {
+        @media only screen and (min-width: $laptop-width + 1) {
+            @content;
+        }
+    } @else if $media == touch-hover {
+        @media (hover:none), (hover:on-demand) {
+            @content;
+        }
+    } @else if $media == mouse-hover {
+        @media (hover: hover) {
+            @content;
+        }
+    } 
+}
