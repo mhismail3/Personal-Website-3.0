@@ -216,6 +216,11 @@ header {
           font-size: 1.2em;
         }
       }
+
+      & .amazon-text {
+        font-weight: bold;
+        color: rgb(235, 153, 0);
+      }
     }
   }
   .contact-single {

@@ -327,6 +327,10 @@ header #header-content #icons .fa-github-square {
   flex-direction: column;
   margin: auto 25px auto 45px;
 }
+#about-me .wrapper .description .amazon-text {
+  font-weight: bold;
+  color: rgb(235, 153, 0);
+}
 @media only screen and (max-width: 750px) {
   #about-me .wrapper .description {
     width: 95%;
