@@ -658,6 +658,10 @@ header #header-content #icons .fa-github-square {
   background: url(../images/rottenpotatoes-header.png);
   background-size: cover;
 }
+#projects .wrapper #loops-tasks-app .project-img {
+  background: url(../images/TasksAppHeader.png);
+  background-size: cover;
+}
 
 #get-in-touch .wrapper {
   display: flex;
